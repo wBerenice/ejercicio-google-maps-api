@@ -16,6 +16,20 @@ let monumentoRevolucion = "Pl. de la República S/N, Tabacalera, Cuauhtémoc, 06
 
 // const URL2 = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(addressWalmart)}&key=${API_KEY}`;
 
+
+//FETCH STORES
+fetch("store_directory.json")
+.then(response => response.json())
+.then(data => showInfo(data));
+
+function showInfo(data){
+    // console.log(data)
+    for(let i = 0; i < data.length; i++){
+        direccionesTexto.push(data[i].Address)
+    }
+}
+
+
 let contador = 0;
 
 function initiazeMap(){
