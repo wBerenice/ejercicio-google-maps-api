@@ -43,7 +43,7 @@ function initiazeMap(){
     4. Crear otro ciclo para que con los datos de coordJSON, se pueda crear un nuevo MARKER para cada store
     */
     let map  = new google.maps.Map(divMapa, {
-        zoom: 10,
+        zoom: 11,
         center: coord
     });
 
